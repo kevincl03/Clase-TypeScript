@@ -97,7 +97,60 @@ const mixed: [number, string] [] = [
    [3, 'three'],
 ];
 
-// añadir elementos al array.
+// metodos de arrays
+
+// añadir elementos al array en la ultima posicion.
 const numberOne: number[] = [1, 2, 3, 4, 5];
 numberOne.push(6);
-console.log(numberOne, 'Agregar valor al array');
+console.log(numberOne, 'Agregar valor al array en la ultima posicion(6)\n');
+
+// eliminar ultimo elemento.
+numberOne.pop();
+console.log(numberOne, 'Ultimo elemento del array eliminado (6)\n');
+
+// eliminar primer elemento.
+numberOne.shift();
+console.log(numberOne, 'Primer elemento del array eliminado (1)\n');
+
+// encontrar la posicion de un elemento.
+const index = numberOne.indexOf(4);
+console.log(index, 'Index of element\n');
+
+// funcion reductora sobre cada elemento del array, devuelve un unico valor.
+const sumaTotal = numberOne.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(sumaTotal, 'Suma total de los elementos del array\n');
+
+// filtrar para selecionar algun dato.
+const cars: any[] = [{ id: 1, brand: 'Ford', model: 'Raptor' }, { id: 2, brand: 'Toyota', model: 'Fortuner' }];
+const findCar = cars.filter((currentValue) => currentValue.id === 1);
+console.log(findCar, 'Carro encontrado id: 1\n');
+
+const evenNumbers = numberOne.filter((num) => num % 2 === 0); // filtrar numeros pares.
+console.log(evenNumbers, 'Numeros pares\n');
+
+// usar map para transformar los elementos.
+const squares = numberOne.map((num) => num * num);
+console.log(squares, 'array mapeado\n');
+
+// encontrar el primer numero mayor que 2.
+const foundNumber: number | undefined = numberOne.find((num) => num > 2);
+console.log(foundNumber, 'Found Number\n');
+
+// validar que todos los elementos del array sean mayor a cero. retorna booleano.
+const allPositive: boolean = numberOne.every((num) => num > 0);
+console.log(allPositive, 'All Psitive\n');
+
+// validar que por lo menos un elemento del array sea mayor a 1. retorna booleano.
+const onePositive: boolean = numberOne.some((num) => num > 1);
+console.log(onePositive, 'One Psitive\n');
+
+// metodos de string
+
+// cadena de texto separada por espacios. retorna array de strings.
+const sentence: string = 'Hello world typescript is great';
+const words: string[] = sentence.split(' ');
+console.log(words, 'Words\n');
+
+// unir un array de palabras en una sola cadena. retorna string.
+const joinedSentence: string = words.join(' ');
+console.log(joinedSentence, 'Joined Sentence\n');

@@ -21,6 +21,11 @@
     "no-restricted-syntax": "off",
     "max-len": "off",
     "@typescript-eslint/no-inferrable-types": "off",
-    "@typescript-eslint/indent": ["error", 3]
+    "@typescript-eslint/indent": ["error", 3],
+    "no-plusplus": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    // deshabilitadas temporalmente
+    "no-console": "off",
+    "@typescript-eslint/no-unused-vars": "off"
   }
 }
